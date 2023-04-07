@@ -1,9 +1,8 @@
 import ChiffreBase
 
 class CaesarChiffre(ChiffreBase): # type: ignore
-    def __init__(self) -> None:
+    def __init__(self, key: str) -> None:
         self.Name = "Caesar Chiffre"
-        pass
     
     def Encrypt(self, msg: str) -> str:
         msg = ""

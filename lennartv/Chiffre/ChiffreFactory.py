@@ -12,12 +12,12 @@ class ChiffreType(Enum):
 
 class ChiffreFactory():
     @staticmethod
-    def CreateChiffre(type: ChiffreType) -> Chiffre:
+    def CreateChiffre(type: ChiffreType, blockLength: int = None, key: str = None) -> Chiffre: # type: ignore
         match type:
             case ChiffreType.SkytaleChiffre:
-                return SkytaleChiffre()
+                return SkytaleChiffre(blockLength)
             case ChiffreType.CaesarChiffre:
-                return CaesarChiffre()
+                return CaesarChiffre(key)
             case ChiffreType.VigenereChiffre:
-                return VigenereChiffre()                  
+                return VigenereChiffre(key)                  
         
