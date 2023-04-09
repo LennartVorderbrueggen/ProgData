@@ -1,6 +1,6 @@
-import ChiffreBase
+from ChiffreBase import Chiffre
 
-class CaesarChiffre(ChiffreBase): # type: ignore
+class CaesarChiffre(Chiffre):
     def __init__(self, key: str) -> None:
         self.Name = "Caesar Chiffre"
     

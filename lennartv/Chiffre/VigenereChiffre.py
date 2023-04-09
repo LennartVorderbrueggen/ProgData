@@ -1,6 +1,6 @@
-import ChiffreBase
+from ChiffreBase import Chiffre
 
-class VigenereChiffre(ChiffreBase): # type: ignore
+class VigenereChiffre(Chiffre):
     def __init__(self, key: str) -> None:
         self.Name = "Vigenere Chiffre"
     

@@ -10,11 +10,11 @@ def ShowChiffre(type: ChiffreType, msg: str, blockLength: int = None, key: str =
     print("Encrypted Message: " + encryptedMsg)
     
     decryptedMsg = chiffre.Decrypt(encryptedMsg)
-    %timeit chiffre.Decrypt(encryptedMsg) # type: ignore
+    #%timeit chiffre.Decrypt(encryptedMsg) # type: ignore
     print("Decrypted Message: " + decryptedMsg)
 
 
 msg = "This message is very important."
-ShowChiffre(ChiffreType.SkytaleChiffre, msg)
-ShowChiffre(ChiffreType.CaesarChiffre, msg)
-ShowChiffre(ChiffreType.SkytaleChiffre, msg)
+ShowChiffre(ChiffreType.SkytaleChiffre, msg, 4)
+# ShowChiffre(ChiffreType.CaesarChiffre, msg, -1, "Keyword")
+# ShowChiffre(ChiffreType.SkytaleChiffre, msg, -1, "Keyword")

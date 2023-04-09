@@ -1,7 +1,8 @@
+
 class Chiffre():
     def __init__(self) -> None:
-        self.Name = None
-
+        self.Name = "Unknown chiffre"
+    
     def Encrypt(self, msg: str) -> str: # type: ignore
         pass
     
